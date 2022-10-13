@@ -1,6 +1,6 @@
 ﻿namespace RC_Project
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +34,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_login = new System.Windows.Forms.Button();
+            this.btn_Goster = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox_KAdi
             // 
-            this.textBox_KAdi.Location = new System.Drawing.Point(208, 203);
+            this.textBox_KAdi.Location = new System.Drawing.Point(218, 201);
             this.textBox_KAdi.Name = "textBox_KAdi";
-            this.textBox_KAdi.Size = new System.Drawing.Size(100, 22);
+            this.textBox_KAdi.Size = new System.Drawing.Size(120, 22);
             this.textBox_KAdi.TabIndex = 0;
             // 
             // textBox_Sifre
             // 
-            this.textBox_Sifre.Location = new System.Drawing.Point(208, 229);
+            this.textBox_Sifre.Location = new System.Drawing.Point(218, 229);
             this.textBox_Sifre.Name = "textBox_Sifre";
-            this.textBox_Sifre.Size = new System.Drawing.Size(100, 22);
+            this.textBox_Sifre.Size = new System.Drawing.Size(90, 22);
             this.textBox_Sifre.TabIndex = 1;
+            this.textBox_Sifre.TextChanged += new System.EventHandler(this.textBox_Sifre_TextChanged);
             // 
             // pictureBox1
             // 
@@ -92,20 +94,33 @@
             this.btn_login.TabIndex = 5;
             this.btn_login.Text = "Oturum Aç";
             this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
-            // Form1
+            // btn_Goster
+            // 
+            this.btn_Goster.Location = new System.Drawing.Point(314, 229);
+            this.btn_Goster.Name = "btn_Goster";
+            this.btn_Goster.Size = new System.Drawing.Size(24, 22);
+            this.btn_Goster.TabIndex = 6;
+            this.btn_Goster.Text = "button1";
+            this.btn_Goster.UseVisualStyleBackColor = true;
+            this.btn_Goster.Click += new System.EventHandler(this.btn_Goster_Click);
+            // 
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 348);
+            this.Controls.Add(this.btn_Goster);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox_Sifre);
             this.Controls.Add(this.textBox_KAdi);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Text = "Geri Dönüşüm Uygulaması";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -120,6 +135,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.Button btn_Goster;
     }
 }
 
