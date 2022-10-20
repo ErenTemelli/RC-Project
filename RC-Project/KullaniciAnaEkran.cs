@@ -16,30 +16,16 @@ namespace RC_Project
         {
             InitializeComponent();
         }
-        public void SetKadTextForLabel(string kAdi)
-        {
-            this.lblKad.Text = kAdi;
-        }
-        public void SetTotalRcLabel(double TotalRC)
-        {
-            this.lblRC.Text = TotalRC.ToString();
-        }
-        public void SetSHALabel(string SHA256)
-        {
-            this.lblSHA.Text = SHA256.ToString();
-        }
-        public void SetKullaniciAdi(string kAdi)
-        {
-            this.lblUsername.Text = kAdi.ToString();
-        }
-        public void SetOlusturmaTarihi(string OlusturmaTarihi)
-        {
-            this.lblolusturmaTarihi.Text = OlusturmaTarihi.ToString();
-        }
+        public KullaniciModel kullanici = new KullaniciModel();
+
 
         private void KullaniciAnaEkran_Load(object sender, EventArgs e)
         {
-
+            lblKad.Text = kullanici.AdSoyad;
+            lblRC.Text = kullanici.ToplamRC.ToString();
+            lblSHA.Text = kullanici.SHA256;
+            lblUsername.Text = kullanici.KullaniciAdi;
+            lblolusturmaTarihi.Text = kullanici.OlusturulmaTarihi.ToString();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -50,6 +36,13 @@ namespace RC_Project
         private void label2_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void rcTransfer_btn_Click(object sender, EventArgs e)
+        {
+            RCTransfer transferEk = new RCTransfer();
+            transferEk.kullanici = kullanici;
+            transferEk.Show();
         }
     }
 }

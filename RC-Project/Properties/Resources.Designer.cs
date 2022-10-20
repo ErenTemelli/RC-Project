@@ -63,9 +63,39 @@ namespace RC_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap changepassword {
+            get {
+                object obj = ResourceManager.GetObject("changepassword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loginscreen {
             get {
                 object obj = ResourceManager.GetObject("loginscreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loginscreen1 {
+            get {
+                object obj = ResourceManager.GetObject("loginscreen1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rctransfer {
+            get {
+                object obj = ResourceManager.GetObject("rctransfer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

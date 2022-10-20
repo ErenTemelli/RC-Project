@@ -67,11 +67,8 @@ namespace RC_Project
             else if (userCredentials.isAccessGranted && !userCredentials.isOperator)
             {
                 KullaniciAnaEkran kEkran = new KullaniciAnaEkran();
-                kEkran.SetKadTextForLabel(userCredentials.AdSoyad);
-                kEkran.SetTotalRcLabel(userCredentials.ToplamRC);
-                kEkran.SetKullaniciAdi(userCredentials.KullaniciAdi);
-                kEkran.SetSHALabel(userCredentials.SHA256);
-                kEkran.SetOlusturmaTarihi(userCredentials.OlusturulmaTarihi.ToString());
+
+                kEkran.kullanici = userCredentials;
                 kEkran.Show();
             }
             else

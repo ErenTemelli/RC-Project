@@ -40,11 +40,8 @@ namespace RC_Project
             this.lblKad = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.rcTransfer_btn = new System.Windows.Forms.Button();
+            this.changePassword_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -165,61 +162,34 @@ namespace RC_Project
             this.label4.TabIndex = 7;
             this.label4.Text = "Hesap Oluşturulma:";
             // 
-            // button1
+            // rcTransfer_btn
             // 
-            this.button1.Location = new System.Drawing.Point(44, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(224, 186);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.rcTransfer_btn.BackgroundImage = global::RC_Project.Properties.Resources.rctransfer;
+            this.rcTransfer_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rcTransfer_btn.Location = new System.Drawing.Point(346, 37);
+            this.rcTransfer_btn.Name = "rcTransfer_btn";
+            this.rcTransfer_btn.Size = new System.Drawing.Size(224, 186);
+            this.rcTransfer_btn.TabIndex = 3;
+            this.rcTransfer_btn.UseVisualStyleBackColor = true;
+            this.rcTransfer_btn.Click += new System.EventHandler(this.rcTransfer_btn_Click);
             // 
-            // button2
+            // changePassword_btn
             // 
-            this.button2.Location = new System.Drawing.Point(346, 37);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(224, 186);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(346, 308);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(224, 186);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(44, 308);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(224, 186);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(657, 308);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(224, 186);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.changePassword_btn.BackgroundImage = global::RC_Project.Properties.Resources.changepassword;
+            this.changePassword_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.changePassword_btn.Location = new System.Drawing.Point(44, 37);
+            this.changePassword_btn.Name = "changePassword_btn";
+            this.changePassword_btn.Size = new System.Drawing.Size(224, 186);
+            this.changePassword_btn.TabIndex = 2;
+            this.changePassword_btn.UseVisualStyleBackColor = true;
             // 
             // KullaniciAnaEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1080, 253);
+            this.Controls.Add(this.rcTransfer_btn);
+            this.Controls.Add(this.changePassword_btn);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "KullaniciAnaEkran";
@@ -245,10 +215,7 @@ namespace RC_Project
         private EventHandler label2_Click;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button changePassword_btn;
+        private System.Windows.Forms.Button rcTransfer_btn;
     }
 }
