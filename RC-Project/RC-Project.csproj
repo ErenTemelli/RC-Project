@@ -72,6 +72,7 @@
     <Compile Include="KullaniciAnaEkran.Designer.cs">
       <DependentUpon>KullaniciAnaEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="KullaniciModel.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

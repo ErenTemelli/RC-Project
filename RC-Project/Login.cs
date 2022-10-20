@@ -23,9 +23,7 @@ namespace RC_Project
         {
             string p_KullaniciAdi = textBox_KAdi.Text;
             string p_Sifre = textBox_Sifre.Text;
-            bool isOperator = false;
-            bool isAccessGranted = false;
-
+            KullaniciModel userCredentials = new KullaniciModel();
             SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=RCdb.db");
             SQLiteCommand sqCommand = (SQLiteCommand)m_dbConnection.CreateCommand();
             sqCommand.CommandText = "SELECT KullaniciAdi, KullaniciSifre, isOperator, AdSoyad, ToplamRC, SHA256, OlusturmaTarihi FROM Kullanicilar";
@@ -33,43 +31,54 @@ namespace RC_Project
             SQLiteDataReader sqReader = sqCommand.ExecuteReader();
                 while (sqReader.Read())
                 {
-                    if(p_KullaniciAdi == sqReader.GetString(0) && p_Sifre == sqReader.GetString(1))
+                    if (p_KullaniciAdi == sqReader.GetString(0) && p_Sifre == sqReader.GetString(1))
                     {
-                        isAccessGranted = true;
-                        if(sqReader.GetInt32(2) == 1)
+                        userCredentials.KullaniciAdi = sqReader.GetString(0);
+                        userCredentials.isAccessGranted = true;
+                        userCredentials.AdSoyad = sqReader.GetString(3);
+                        userCredentials.ToplamRC = sqReader.GetDouble(4);
+                        userCredentials.SHA256 = sqReader.GetString(5);
+                        userCredentials.OlusturulmaTarihi = sqReader.GetDateTime(6);
+
+                    if (sqReader.GetInt32(2) == 1)
                         {
-                            isOperator = true;
+                            userCredentials.isOperator = true;
                         }
-                    MessageBox.Show("Hoşgeldiniz, Sn. " + sqReader.GetString(3) + "\nYetki Seviyesi: " + isOperator);
-                    this.Hide();
-                    if(isOperator)
-                    {
-                        OperatorAnaEkran opEkran = new OperatorAnaEkran();
-                        opEkran.SetKadTextForLabel(sqReader.GetString(3));
-                        opEkran.SetTotalRcLabel(sqReader.GetDouble(4));
-                        opEkran.SetKullaniciAdi(sqReader.GetString(0)); 
-                        opEkran.SetSHALabel(sqReader.GetString(5));
-                        opEkran.SetOlusturmaTarihi(sqReader.GetString(6));
-                        opEkran.Show();
-                    }
-                    else
-                    {
-                        KullaniciAnaEkran kEkran = new KullaniciAnaEkran();
-                        kEkran.SetKadTextForLabel(sqReader.GetString(3));
-                        kEkran.SetTotalRcLabel(sqReader.GetDouble(4));
-                        kEkran.SetKullaniciAdi(sqReader.GetString(0));
-                        kEkran.SetSHALabel(sqReader.GetString(5));
-                        kEkran.SetOlusturmaTarihi(sqReader.GetString(6));
-                        kEkran.Show();
-                    }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Oturum açmaya çalıştığınız bilgiler hatalı!");
                     }
                 }
                 sqReader.Close();
                 m_dbConnection.Close();
+            if(userCredentials.isAccessGranted)
+            {
+                MessageBox.Show("Hoşgeldiniz, Sn. " + userCredentials.AdSoyad + "\nYetki Seviyesi: " + userCredentials.isOperator);
+                this.Hide();
+            }
+
+            if (userCredentials.isOperator && userCredentials.isAccessGranted)
+            {
+                OperatorAnaEkran opEkran = new OperatorAnaEkran();
+                opEkran.SetKadTextForLabel(userCredentials.AdSoyad);
+                opEkran.SetTotalRcLabel(userCredentials.ToplamRC);
+                opEkran.SetKullaniciAdi(userCredentials.KullaniciAdi);
+                opEkran.SetSHALabel(userCredentials.SHA256);
+                opEkran.SetOlusturmaTarihi(userCredentials.OlusturulmaTarihi.ToString());
+                opEkran.Show();
+            }
+            else if (userCredentials.isAccessGranted && !userCredentials.isOperator)
+            {
+                KullaniciAnaEkran kEkran = new KullaniciAnaEkran();
+                kEkran.SetKadTextForLabel(userCredentials.AdSoyad);
+                kEkran.SetTotalRcLabel(userCredentials.ToplamRC);
+                kEkran.SetKullaniciAdi(userCredentials.KullaniciAdi);
+                kEkran.SetSHALabel(userCredentials.SHA256);
+                kEkran.SetOlusturmaTarihi(userCredentials.OlusturulmaTarihi.ToString());
+                kEkran.Show();
+            }
+            else
+            {
+                MessageBox.Show("Oturum açmaya çalıştığınız bilgiler hatalı!");
+                this.Show();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
