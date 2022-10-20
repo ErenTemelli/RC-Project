@@ -32,6 +32,10 @@ namespace RC_Project
         {
             this.lblUsername.Text = kAdi.ToString();
         }
+        public void SetOlusturmaTarihi(string OlusturmaTarihi)
+        {
+            this.lblOlusturmaTarihi.Text = OlusturmaTarihi.ToString();
+        }
         private void OperatorAnaEkran_Load(object sender, EventArgs e)
         {
 

@@ -28,7 +28,7 @@ namespace RC_Project
 
             SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=RCdb.db");
             SQLiteCommand sqCommand = (SQLiteCommand)m_dbConnection.CreateCommand();
-            sqCommand.CommandText = "SELECT KullaniciAdi, KullaniciSifre, isOperator, AdSoyad, ToplamRC, SHA256 FROM Kullanicilar";
+            sqCommand.CommandText = "SELECT KullaniciAdi, KullaniciSifre, isOperator, AdSoyad, ToplamRC, SHA256, OlusturmaTarihi FROM Kullanicilar";
             m_dbConnection.Open();
             SQLiteDataReader sqReader = sqCommand.ExecuteReader();
                 while (sqReader.Read())
@@ -49,11 +49,17 @@ namespace RC_Project
                         opEkran.SetTotalRcLabel(sqReader.GetDouble(4));
                         opEkran.SetKullaniciAdi(sqReader.GetString(0)); 
                         opEkran.SetSHALabel(sqReader.GetString(5));
+                        opEkran.SetOlusturmaTarihi(sqReader.GetString(6));
                         opEkran.Show();
                     }
                     else
                     {
                         KullaniciAnaEkran kEkran = new KullaniciAnaEkran();
+                        kEkran.SetKadTextForLabel(sqReader.GetString(3));
+                        kEkran.SetTotalRcLabel(sqReader.GetDouble(4));
+                        kEkran.SetKullaniciAdi(sqReader.GetString(0));
+                        kEkran.SetSHALabel(sqReader.GetString(5));
+                        kEkran.SetOlusturmaTarihi(sqReader.GetString(6));
                         kEkran.Show();
                     }
                     }
