@@ -22,5 +22,7 @@ namespace RC_Project
 
         public bool isAccessGranted;
 
+        public string KullaniciSifre;
+
     }
 }

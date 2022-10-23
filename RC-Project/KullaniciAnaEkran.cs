@@ -44,5 +44,12 @@ namespace RC_Project
             transferEk.kullanici = kullanici;
             transferEk.Show();
         }
+
+        private void changePassword_btn_Click(object sender, EventArgs e)
+        {
+            ChangePassword passwordChangeSc = new ChangePassword();
+            passwordChangeSc.kullanici = kullanici;
+            passwordChangeSc.Show();
+        }
     }
 }

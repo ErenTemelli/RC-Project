@@ -69,6 +69,7 @@ namespace RC_Project
                 updateCommand2.CommandText = "UPDATE Kullanicilar SET ToplamRC = @YeniRC WHERE KullaniciAdi = @transferKad";
                 updateCommand2.Parameters.AddWithValue("YeniRC", (kullanici.ToplamRC - TransferEdileekCoin));
                 updateCommand2.Parameters.AddWithValue("transferKad", kullanici.KullaniciAdi);
+                kullanici.ToplamRC = kullanici.ToplamRC - TransferEdileekCoin;
                 updateCommand2.ExecuteNonQuery();
 
                 MessageBox.Show("Transfer başarıyla tamamlandı.");
