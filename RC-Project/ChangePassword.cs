@@ -24,6 +24,7 @@ namespace RC_Project
             
             string newPassword = Convert.ToString(txtNewPassword.Text);
             string oldPassword = Convert.ToString(txtOldPassword.Text);
+            string newPasswordCheck = Convert.ToString(txtNewPassword2.Text);
             KullaniciModel passwordChangeSc = new KullaniciModel();
             
             bool chanceRequirements = false; 
@@ -34,12 +35,7 @@ namespace RC_Project
             SQLiteDataReader sqReader = sqCommand.ExecuteReader();
             while (sqReader.Read())
             {
-                if(oldPassword == newPassword)
-                {
-                    chanceRequirements = false;
-                    MessageBox.Show("Yeni şifreniz eskisi ile aynı olamaz.");
-                    return;
-                }
+               
                 if(oldPassword == sqReader.GetString(0))
                 {
                     chanceRequirements = true;
@@ -47,6 +43,18 @@ namespace RC_Project
                 }
             }
             sqReader.Close();
+            if (oldPassword == newPassword)
+            {
+                chanceRequirements = false;
+                MessageBox.Show("Yeni şifreniz eskisi ile aynı olamaz.");
+                return;
+            }
+            if (newPassword != newPasswordCheck)
+            {
+                chanceRequirements = false;
+                MessageBox.Show("Girdiğiniz yeni şifreler birbiri ile uyuşmuyor.");
+                return;
+            }
             if (!chanceRequirements)
             {
                 MessageBox.Show("Eski şifrenizi yanlış girdiniz.");
