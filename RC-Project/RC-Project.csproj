@@ -147,6 +147,25 @@
   <ItemGroup>
     <None Include="images\rctransfer.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\usermanagement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\itemmanagement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\dataentry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\rcquery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\recycletypes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Kullanicilar\" />
+    <Folder Include="Urunler\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

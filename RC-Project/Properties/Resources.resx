@@ -121,13 +121,28 @@
   <data name="loginscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\loginscreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rcquery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\rcquery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usermanagement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\usermanagement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="changepassword" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\changepassword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="itemmanagement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\itemmanagement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dataentry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\dataentry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loginscreen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\loginscreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rctransfer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\rctransfer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="recycletypes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\recycletypes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

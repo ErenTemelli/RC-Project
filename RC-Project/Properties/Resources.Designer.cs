@@ -73,6 +73,26 @@ namespace RC_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dataentry {
+            get {
+                object obj = ResourceManager.GetObject("dataentry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap itemmanagement {
+            get {
+                object obj = ResourceManager.GetObject("itemmanagement", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loginscreen {
             get {
                 object obj = ResourceManager.GetObject("loginscreen", resourceCulture);
@@ -93,9 +113,39 @@ namespace RC_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rcquery {
+            get {
+                object obj = ResourceManager.GetObject("rcquery", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rctransfer {
             get {
                 object obj = ResourceManager.GetObject("rctransfer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap recycletypes {
+            get {
+                object obj = ResourceManager.GetObject("recycletypes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usermanagement {
+            get {
+                object obj = ResourceManager.GetObject("usermanagement", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

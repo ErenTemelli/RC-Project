@@ -57,11 +57,7 @@ namespace RC_Project
             if (userCredentials.isOperator && userCredentials.isAccessGranted)
             {
                 OperatorAnaEkran opEkran = new OperatorAnaEkran();
-                opEkran.SetKadTextForLabel(userCredentials.AdSoyad);
-                opEkran.SetTotalRcLabel(userCredentials.ToplamRC);
-                opEkran.SetKullaniciAdi(userCredentials.KullaniciAdi);
-                opEkran.SetSHALabel(userCredentials.SHA256);
-                opEkran.SetOlusturmaTarihi(userCredentials.OlusturulmaTarihi.ToString());
+                opEkran.kullanici = userCredentials;
                 opEkran.Show();
             }
             else if (userCredentials.isAccessGranted && !userCredentials.isOperator)

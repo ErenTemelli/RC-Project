@@ -75,5 +75,20 @@ namespace RC_Project
 
 
         }
+
+        private void txtNewPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtNewPassword.PasswordChar = '*';
+        }
+
+        private void txtNewPassword2_TextChanged(object sender, EventArgs e)
+        {
+            txtNewPassword2.PasswordChar = '*';
+        }
+
+        private void txtOldPassword_TextChanged(object sender, EventArgs e)
+        {
+            txtOldPassword.PasswordChar = '*';
+        }
     }
 }
