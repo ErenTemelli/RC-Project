@@ -90,5 +90,10 @@ namespace RC_Project
         {
             txtOldPassword.PasswordChar = '*';
         }
+
+        private void ChangePassword_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

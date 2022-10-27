@@ -26,5 +26,12 @@ namespace RC_Project
             lblUsername.Text = kullanici.KullaniciAdi;
             lblolusturmaTarihi.Text = kullanici.OlusturulmaTarihi.ToString();
         }
+
+        private void Users_btn_Click(object sender, EventArgs e)
+        {
+            KullanıcıListele listeEkrani = new KullanıcıListele();
+            listeEkrani.Show();
+
+        }
     }
 }

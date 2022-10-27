@@ -72,6 +72,18 @@
     <Compile Include="ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kullanicilar\KullaniciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kullanicilar\KullaniciEkle.Designer.cs">
+      <DependentUpon>KullaniciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kullanicilar\KullanıcıListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kullanicilar\KullanıcıListele.Designer.cs">
+      <DependentUpon>KullanıcıListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="RCTransfer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KullaniciAnaEkran.resx">
       <DependentUpon>KullaniciAnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kullanicilar\KullaniciEkle.resx">
+      <DependentUpon>KullaniciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kullanicilar\KullanıcıListele.resx">
+      <DependentUpon>KullanıcıListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -163,7 +181,6 @@
     <None Include="images\recycletypes.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Kullanicilar\" />
     <Folder Include="Urunler\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
