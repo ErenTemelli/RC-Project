@@ -165,7 +165,7 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.lblKad);
             this.panel2.Location = new System.Drawing.Point(506, 24);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(287, 152);
             this.panel2.TabIndex = 2;
@@ -175,7 +175,7 @@
             this.button3.BackgroundImage = global::RC_Project.Properties.Resources.recycletypes;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Location = new System.Drawing.Point(506, 236);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(168, 151);
             this.button3.TabIndex = 8;
@@ -186,7 +186,7 @@
             this.button1.BackgroundImage = global::RC_Project.Properties.Resources.rcquery;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(277, 236);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(168, 151);
             this.button1.TabIndex = 7;
@@ -197,7 +197,7 @@
             this.button2.BackgroundImage = global::RC_Project.Properties.Resources.dataentry;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Location = new System.Drawing.Point(50, 236);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(168, 151);
             this.button2.TabIndex = 6;
@@ -208,18 +208,19 @@
             this.rcTransfer_btn.BackgroundImage = global::RC_Project.Properties.Resources.itemmanagement;
             this.rcTransfer_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.rcTransfer_btn.Location = new System.Drawing.Point(277, 24);
-            this.rcTransfer_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rcTransfer_btn.Margin = new System.Windows.Forms.Padding(2);
             this.rcTransfer_btn.Name = "rcTransfer_btn";
             this.rcTransfer_btn.Size = new System.Drawing.Size(168, 151);
             this.rcTransfer_btn.TabIndex = 5;
             this.rcTransfer_btn.UseVisualStyleBackColor = true;
+            this.rcTransfer_btn.Click += new System.EventHandler(this.rcTransfer_btn_Click);
             // 
             // Users_btn
             // 
             this.Users_btn.BackgroundImage = global::RC_Project.Properties.Resources.usermanagement;
             this.Users_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Users_btn.Location = new System.Drawing.Point(50, 24);
-            this.Users_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Users_btn.Margin = new System.Windows.Forms.Padding(2);
             this.Users_btn.Name = "Users_btn";
             this.Users_btn.Size = new System.Drawing.Size(168, 151);
             this.Users_btn.TabIndex = 4;
@@ -237,7 +238,7 @@
             this.Controls.Add(this.rcTransfer_btn);
             this.Controls.Add(this.Users_btn);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OperatorAnaEkran";
             this.Text = "OperatorAnaEkran";
             this.Load += new System.EventHandler(this.OperatorAnaEkran_Load);

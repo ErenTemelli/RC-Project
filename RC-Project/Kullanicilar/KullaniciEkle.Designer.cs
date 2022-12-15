@@ -159,6 +159,7 @@
             this.Controls.Add(this.lblKad);
             this.Name = "KullaniciEkle";
             this.Text = "KullaniciEkle";
+            this.Load += new System.EventHandler(this.KullaniciEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

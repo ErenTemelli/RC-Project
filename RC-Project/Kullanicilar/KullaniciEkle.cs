@@ -38,17 +38,32 @@ namespace RC_Project.Kullanicilar
             insertCommand.Parameters.AddWithValue("sha256", textBox_SHA.Text);
             insertCommand.Parameters.AddWithValue("isoperator", checkBoxOp.Checked ? 1 : 0);
             insertCommand.Parameters.AddWithValue("tarih", DateTime.Now);
+            if (textBox_Kadi.Text=="" || textBox_Sifre.Text=="" || textBox_AdSoyad.Text=="" || textBox_SHA.Text=="")
+            {
+                MessageBox.Show("Kullanici bilgilerinde boşluk olamaz!");
+                return;
+            }
             m_dbConnection.Open();
             insertCommand.ExecuteNonQuery();
             m_dbConnection.Close();
+           
+            
+            
             MessageBox.Show("Kullanici başarıyla eklendi.");
             this.Close();
+            
+            
         }
 
         private void textBox_Sifre_TextChanged(object sender, EventArgs e)
         {
             textBox_Sifre.PasswordChar = '*';
             
+        }
+
+        private void KullaniciEkle_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

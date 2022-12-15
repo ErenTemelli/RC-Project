@@ -42,6 +42,7 @@
             this.dataGridKullanicilar.Name = "dataGridKullanicilar";
             this.dataGridKullanicilar.Size = new System.Drawing.Size(776, 397);
             this.dataGridKullanicilar.TabIndex = 0;
+           
             // 
             // bnt_sil
             // 
@@ -51,6 +52,7 @@
             this.bnt_sil.TabIndex = 1;
             this.bnt_sil.Text = "Sil";
             this.bnt_sil.UseVisualStyleBackColor = true;
+            this.bnt_sil.Click += new System.EventHandler(this.bnt_sil_Click);
             // 
             // btn_ekle
             // 

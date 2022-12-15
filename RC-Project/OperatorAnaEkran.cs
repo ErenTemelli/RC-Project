@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RC_Project.Urunler;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,12 @@ namespace RC_Project
             KullanıcıListele listeEkrani = new KullanıcıListele();
             listeEkrani.Show();
 
+        }
+
+        private void rcTransfer_btn_Click(object sender, EventArgs e)
+        {
+            UrunListele1 urunEKrani = new UrunListele1();
+            urunEKrani.Show();
         }
     }
 }
