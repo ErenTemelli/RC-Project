@@ -40,5 +40,11 @@ namespace RC_Project
             UrunListele1 urunEKrani = new UrunListele1();
             urunEKrani.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RCSorgula rcSorguEkrani = new RCSorgula();
+            rcSorguEkrani.Show();
+        }
     }
 }
