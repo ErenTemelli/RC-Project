@@ -50,14 +50,10 @@ namespace RC_Project
 
         public void bnt_sil_Click(object sender, EventArgs e)
         {
+
             if(dataGridKullanicilar.SelectedRows.Count > 0)
             {
-                //dataGridKullanicilar.Rows.RemoveAt(dataGridKullanicilar.SelectedRows[0].Index);
-                foreach (DataGridViewRow drow in dataGridKullanicilar.SelectedRows )
-                {
-                    int numara = Convert.ToInt32(drow.Cells[0].Value);
-                    kayitSil(numara);
-                }
+                kayitSil(dataGridKullanicilar.SelectedCells[0].Value.ToString());
             }
             else
             {
@@ -65,17 +61,38 @@ namespace RC_Project
             }
         }
 
-        void kayitSil( int numara)
+        void kayitSil(string kAdi)
         {
-            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=RCdb.db");
-            SQLiteCommand sqCommand = (SQLiteCommand)m_dbConnection.CreateCommand();
-            sqCommand.CommandText = "DELETE FROM Kullanicilar WHERE numara=@numara";
-            m_dbConnection.Open();
-
-
+            try
+            {
+                SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=RCdb.db");
+                SQLiteCommand sqCommand = (SQLiteCommand)m_dbConnection.CreateCommand();
+                sqCommand.CommandText = "DELETE FROM Kullanicilar WHERE KullaniciAdi=@kAdi";
+                sqCommand.Parameters.AddWithValue("@kAdi", kAdi);
+                m_dbConnection.Open();
+                sqCommand.ExecuteNonQuery();
+                m_dbConnection.Close();
+                MessageBox.Show("Kullanıcı başarı ile silindi.");
+            }
+            catch
+            {
+                MessageBox.Show("İşlemi yaparken hata ile karşılaşıldı.");
+            }
         }
 
-        
+        private void btn_duzenle_Click(object sender, EventArgs e)
+        {
+            if (dataGridKullanicilar.SelectedRows.Count > 0)
+            {
+                KullaniciEkle kullaniciEkle = new KullaniciEkle();
+                kullaniciEkle.bilgileriDoldur(dataGridKullanicilar.SelectedCells[0].Value.ToString());
+                kullaniciEkle.Show();
+            }
+            else
+            {
+                MessageBox.Show("Lutfen Düzenlenecek Satiri Seciniz.");
+            }
 
+        }
     }
 }

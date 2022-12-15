@@ -29,9 +29,9 @@ namespace RC_Project.Urunler
                  VALUES (@nesneadi,@karbonpuani,@geridonusumtipi,@tarih)";
             insertCommand.Parameters.AddWithValue("nesneadi", textBox_NAdi.Text);
             insertCommand.Parameters.AddWithValue("karbonpuani", textBox_CPoint.Text);
-            insertCommand.Parameters.AddWithValue("geridonusumtipi", textBox_RType.Text);
+            insertCommand.Parameters.AddWithValue("geridonusumtipi", getGeriDonusum(comboBoxGeriDonusum.SelectedItem.ToString()));
             insertCommand.Parameters.AddWithValue("tarih", DateTime.Now);
-            if (textBox_NAdi.Text == "" || textBox_CPoint.Text == "" || textBox_RType.Text == "")
+            if (textBox_NAdi.Text == "" || textBox_CPoint.Text == "" || comboBoxGeriDonusum.SelectedItem.ToString() == "")
             {
                 MessageBox.Show("Eklenecek nesne bilgilerinde boşluk olamaz!");
                 return;
@@ -42,5 +42,40 @@ namespace RC_Project.Urunler
             MessageBox.Show("Nesne başarıyla eklendi.");
             this.Close();
         }
+
+        private void UrunEkle_Load(object sender, EventArgs e)
+        {
+            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=RCdb.db");
+            SQLiteCommand sqCommand = (SQLiteCommand)m_dbConnection.CreateCommand();
+            sqCommand.CommandText = "SELECT * FROM GeriDonusumTipleri";
+            m_dbConnection.Open();
+            SQLiteDataReader sqReader = sqCommand.ExecuteReader();
+            while (sqReader.Read())
+            {
+                comboBoxGeriDonusum.Items.Add(sqReader.GetString(1));
+            }
+            sqReader.Close();
+            m_dbConnection.Close();
+        }
+
+        public int getGeriDonusum(string GeriDonusumAdi)
+        {
+            int ret = 0;
+            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=RCdb.db");
+            SQLiteCommand sqCommand = (SQLiteCommand)m_dbConnection.CreateCommand();
+            sqCommand.CommandText = "SELECT RecID FROM GeriDonusumTipleri WHERE GeriDonusumTipi=@GT";
+            sqCommand.Parameters.AddWithValue("GT", GeriDonusumAdi);
+            m_dbConnection.Open();
+            SQLiteDataReader sqReader = sqCommand.ExecuteReader();
+            while (sqReader.Read())
+            {
+                ret = sqReader.GetInt32(0);
+            }
+            sqReader.Close();
+            m_dbConnection.Close();
+            return ret;
+        }
     }
+
+     
 }
