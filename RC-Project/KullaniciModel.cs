@@ -25,4 +25,15 @@ namespace RC_Project
         public string KullaniciSifre;
 
     }
+
+    public class UrunModel
+    {
+        public string NesneAdi;
+
+        public string KarbonPoint;
+
+        public int GeriDonusumTip;
+
+        public DateTime OlusturulmaTarihi;
+    }
 }

@@ -72,6 +72,18 @@
     <Compile Include="ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeriDonusum\GeriDonusumEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeriDonusum\GeriDonusumEkle.Designer.cs">
+      <DependentUpon>GeriDonusumEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeriDonusum\GeriDonusumListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeriDonusum\GeriDonusumListele.Designer.cs">
+      <DependentUpon>GeriDonusumListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kullanicilar\KullaniciEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,12 @@
     </Compile>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeriDonusum\GeriDonusumEkle.resx">
+      <DependentUpon>GeriDonusumEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeriDonusum\GeriDonusumListele.resx">
+      <DependentUpon>GeriDonusumListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KullaniciAnaEkran.resx">
       <DependentUpon>KullaniciAnaEkran.cs</DependentUpon>

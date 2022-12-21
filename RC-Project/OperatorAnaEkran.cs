@@ -1,4 +1,5 @@
-﻿using RC_Project.Urunler;
+﻿using RC_Project.GeriDonusum;
+using RC_Project.Urunler;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,12 @@ namespace RC_Project
         {
             RCSorgula rcSorguEkrani = new RCSorgula();
             rcSorguEkrani.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GeriDonusumListele geriDonusumListele = new GeriDonusumListele();
+            geriDonusumListele.Show();
         }
     }
 }

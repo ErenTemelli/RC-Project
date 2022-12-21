@@ -39,29 +39,27 @@
             // dataGridUrunler
             // 
             this.dataGridUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridUrunler.Location = new System.Drawing.Point(16, 50);
-            this.dataGridUrunler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridUrunler.Location = new System.Drawing.Point(12, 41);
             this.dataGridUrunler.Name = "dataGridUrunler";
             this.dataGridUrunler.RowHeadersWidth = 51;
-            this.dataGridUrunler.Size = new System.Drawing.Size(688, 489);
+            this.dataGridUrunler.Size = new System.Drawing.Size(516, 397);
             this.dataGridUrunler.TabIndex = 1;
             // 
             // btn_duzenle
             // 
-            this.btn_duzenle.Location = new System.Drawing.Point(232, 15);
-            this.btn_duzenle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_duzenle.Location = new System.Drawing.Point(174, 12);
             this.btn_duzenle.Name = "btn_duzenle";
-            this.btn_duzenle.Size = new System.Drawing.Size(100, 28);
+            this.btn_duzenle.Size = new System.Drawing.Size(75, 23);
             this.btn_duzenle.TabIndex = 6;
             this.btn_duzenle.Text = "Düzenle";
             this.btn_duzenle.UseVisualStyleBackColor = true;
+            this.btn_duzenle.Click += new System.EventHandler(this.btn_duzenle_Click);
             // 
             // btn_ekle
             // 
-            this.btn_ekle.Location = new System.Drawing.Point(16, 15);
-            this.btn_ekle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ekle.Location = new System.Drawing.Point(12, 12);
             this.btn_ekle.Name = "btn_ekle";
-            this.btn_ekle.Size = new System.Drawing.Size(100, 28);
+            this.btn_ekle.Size = new System.Drawing.Size(75, 23);
             this.btn_ekle.TabIndex = 5;
             this.btn_ekle.Text = "Ekle";
             this.btn_ekle.UseVisualStyleBackColor = true;
@@ -69,10 +67,9 @@
             // 
             // bnt_sil
             // 
-            this.bnt_sil.Location = new System.Drawing.Point(124, 15);
-            this.bnt_sil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bnt_sil.Location = new System.Drawing.Point(93, 12);
             this.bnt_sil.Name = "bnt_sil";
-            this.bnt_sil.Size = new System.Drawing.Size(100, 28);
+            this.bnt_sil.Size = new System.Drawing.Size(75, 23);
             this.bnt_sil.TabIndex = 4;
             this.bnt_sil.Text = "Sil";
             this.bnt_sil.UseVisualStyleBackColor = true;
@@ -80,14 +77,13 @@
             // 
             // UrunListele1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 554);
+            this.ClientSize = new System.Drawing.Size(540, 450);
             this.Controls.Add(this.btn_duzenle);
             this.Controls.Add(this.btn_ekle);
             this.Controls.Add(this.bnt_sil);
             this.Controls.Add(this.dataGridUrunler);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UrunListele1";
             this.Text = "UrunListele1";
             this.Activated += new System.EventHandler(this.UrunListele1_Activated);

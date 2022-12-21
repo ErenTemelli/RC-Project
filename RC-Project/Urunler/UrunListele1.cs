@@ -34,16 +34,7 @@ namespace RC_Project.Urunler
 
         private void UrunListele1_Load(object sender, EventArgs e)
         {
-            /*SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=RCdb.db");
-            SQLiteCommand sqCommand = (SQLiteCommand)m_dbConnection.CreateCommand();
-            sqCommand.CommandText = "SELECT NesneAdi, KarbonPoint, GeriDonusumTip, OlusturmaTarihi FROM Nesneler";
-            m_dbConnection.Open();
-            SQLiteDataAdapter da = new SQLiteDataAdapter(sqCommand.CommandText, m_dbConnection);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "Nesneler");
-            dataGridUrunler.DataSource = ds.Tables[0].DefaultView;
-            // dataGridUrunler.Columns[4].Width = 175;
-            // dataGridUrunler.Columns[5].Width = 140;*/
+            
         }
 
         private void btn_ekle_Click(object sender, EventArgs e)
@@ -80,6 +71,20 @@ namespace RC_Project.Urunler
             catch
             {
                 MessageBox.Show("İşlemi yaparken hata ile karşılaşıldı.");
+            }
+        }
+
+        private void btn_duzenle_Click(object sender, EventArgs e)
+        {
+            if(dataGridUrunler.SelectedRows.Count > 0 )
+            {
+                UrunEkle urunEkle = new UrunEkle();
+                urunEkle.urunBilgiDoldur(dataGridUrunler.SelectedCells[0].Value.ToString());
+                urunEkle.Show();
+            }
+            else
+            {
+                MessageBox.Show("Lutfen Duzenlenecek Satiri Seciniz.");
             }
         }
     }

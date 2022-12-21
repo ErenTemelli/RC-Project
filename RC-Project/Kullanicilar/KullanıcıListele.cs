@@ -33,7 +33,7 @@ namespace RC_Project
             KullaniciEkle kullaniciEkle = new KullaniciEkle();
             kullaniciEkle.Show();
         }
-
+            
         public void KullanıcıListele_Activated(object sender, EventArgs e)
         {
             SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=RCdb.db");
