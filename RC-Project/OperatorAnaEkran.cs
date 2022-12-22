@@ -53,5 +53,11 @@ namespace RC_Project
             GeriDonusumListele geriDonusumListele = new GeriDonusumListele();
             geriDonusumListele.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OperatorProcess processScreen = new OperatorProcess();
+            processScreen.Show();
+        }
     }
 }

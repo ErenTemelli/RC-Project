@@ -96,6 +96,12 @@
     <Compile Include="Kullanicilar\KullanıcıListele.Designer.cs">
       <DependentUpon>KullanıcıListele.cs</DependentUpon>
     </Compile>
+    <Compile Include="OperatorProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperatorProcess.Designer.cs">
+      <DependentUpon>OperatorProcess.cs</DependentUpon>
+    </Compile>
     <Compile Include="RCSorgula.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OperatorAnaEkran.resx">
       <DependentUpon>OperatorAnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperatorProcess.resx">
+      <DependentUpon>OperatorProcess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
